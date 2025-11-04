@@ -43,7 +43,7 @@
 
 body {
   font-family: sans-serif;
-  margin: 20px;
+  margin: 0;
   padding: 0;
 }
 
@@ -87,12 +87,6 @@ ul {
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
 }
 
 .square {

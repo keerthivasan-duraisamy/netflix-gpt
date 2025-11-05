@@ -1,0 +1,55 @@
+type User @table {
+  username: String!
+  email: String!
+  createdAt: Timestamp!
+  preferredGenres: [String]
+  aiPreferenceLevel: String
+}
+
+type Content @table {
+  title: String!
+  contentType: String!
+  releaseYear: Int!
+  createdAt: Timestamp!
+  synopsis: String
+  genres: [String]
+  runtime: Int
+  imageUrl: String
+  averageRating: Float
+}
+
+type WatchlistEntry @table(key: ["user", "content"]) {
+  user: User!
+  content: Content!
+  createdAt: Timestamp!
+  addedDate: Date
+}
+
+type WatchHistoryEntry @table(key: ["user", "content"]) {
+  user: User!
+  content: Content!
+  watchedAt: Timestamp!
+  rating: Int
+}
+
+type Recommendation @table(key: ["user", "content"]) {
+  user: User!
+  content: Content!
+  recommendedAt: Timestamp!
+  confidenceScore: Float!
+  feedback: String
+}
+
+type CustomList @table {
+  user: User!
+  name: String!
+  createdAt: Timestamp!
+  description: String
+}
+
+type CustomListItem @table(key: ["customList", "content"]) {
+  customList: CustomList!
+  content: Content!
+  position: Int!
+  note: String
+}

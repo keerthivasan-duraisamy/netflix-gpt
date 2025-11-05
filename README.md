@@ -1,4 +1,9 @@
 # Netflix GPT - Namaste React
 
 Create Header
-Create Login Form
+Created routing
+Create Login Form & Sigup Form
+
+Form Validation
+useRef Hook
+

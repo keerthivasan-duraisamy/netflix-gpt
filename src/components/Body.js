@@ -13,6 +13,7 @@ const Body = () => {
       element: <Browse />
     }
   ]);
+
   return (
     <main>
       <RouterProvider router={router} />

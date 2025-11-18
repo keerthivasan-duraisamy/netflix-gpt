@@ -16,7 +16,7 @@ const Header = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log('Auth from onAuthStateChanged: ', auth);
+      //console.log('Auth from onAuthStateChanged: ', auth);
       if (user) {
         const {uid, displayName, email, photoURL} = user;
         dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
@@ -46,7 +46,7 @@ const Header = () => {
       <div className="items-center space-x-4">
         {user && <div className="user-info flex items-center">
             <img src={user.photoURL} alt="user-image" className="max-w-[50px] mr-2 rounded-full"/>
-            <button className="text-black p-4 text-decoration-underline" onClick={handleSignOut}>Sign Out</button>
+            <button className="text-white black px-2 py-2 text-decoration-underline bg-red-600 rounded-md" onClick={handleSignOut}>Sign Out</button>
           </div>
         }
       </div>

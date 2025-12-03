@@ -9,7 +9,7 @@ import { addNowPlayingMovies } from "../utils/movieSlice";
 const Browse = () => {
   //useMovieCollection();
   const dispatch = useDispatch();
-  const { data, error, isLoading } = useGetNowPlayingMoviesQuery({
+  const { data } = useGetNowPlayingMoviesQuery({
     language: "en-US",
     page: 1,
   });
